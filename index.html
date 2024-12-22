@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,16 +53,41 @@
             width: 100%;
         }
 
-        .login-container, .register-container, .welcome-container {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            position: relative;
-        }
+.login-container, .register-container, .welcome-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Cambia de 100% a 90% para evitar que se corte en horizontales estrechas */
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    margin: auto; /* Centra el contenedor */
+}
+
+/* Media queries para dispositivos pequeños en horizontal */
+@media (max-width: 768px) {
+    .login-container, .register-container, .welcome-container {
+        max-width: 90%; /* Se asegura que no se corte en dispositivos más pequeños */
+        padding: 1.5rem; /* Ajusta el espacio interior para que no se vea apretado */
+    }
+}
+
+/* Media queries para pantallas de tablet (820x1180px aprox.) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login-container, .register-container, .welcome-container {
+        max-width: 700px; /* Permite que el contenedor sea más grande en pantallas medianas */
+        padding: 2.5rem; /* Da un poco más de espacio interior para mejorar la visualización */
+    }
+}
+
+/* Ajustes para pantallas más grandes si es necesario */
+@media (min-width: 1025px) {
+    .login-container, .register-container, .welcome-container {
+        max-width: 600px; /* Escala para pantallas más grandes como iPads Pro */
+    }
+}
+
 
         h1 {
             font-size: 2rem;
